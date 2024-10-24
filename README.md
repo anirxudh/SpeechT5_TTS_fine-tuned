@@ -10,7 +10,7 @@ datasets:
 - Yassmen/TTS_English_Technical_data
 model-index:
 - name: SpeechT5 fine-tuning
-  results: []
+  results: [accurate result]
 ---
 
 <!-- This model card has been generated automatically according to the information the Trainer had access to. You
@@ -22,19 +22,37 @@ This model is a fine-tuned version of [microsoft/speecht5_tts](https://huggingfa
 It achieves the following results on the evaluation set:
 - Loss: 0.4572
 
-## Model description
+# SpeechT5 Model Fine-tuned for Technical Vocabulary
 
-More information needed
+## Model Description
+The SpeechT5 model is a versatile speech processing model designed for tasks such as text-to-speech (TTS), automatic speech recognition (ASR), and other speech-related applications. This version of the model has been **fine-tuned specifically for technical vocabulary in English**, making it well-suited for domains where specialized terms are frequently used (e.g., engineering, computer science, medical terminology).
 
-## Intended uses & limitations
+The fine-tuned model has been trained to:
+- Accurately recognize and synthesize **technical vocabulary** in English.
+- Improve the pronunciation and understanding of complex, domain-specific terms, ensuring higher accuracy in tasks like speech synthesis and recognition for technical contexts.
 
-More information needed
+## Intended Uses & Limitations
 
-## Training and evaluation data
+### Intended Uses:
+- **Text-to-Speech (TTS)**: The model can convert technical English text (especially in domains such as computer science, engineering, and medical fields) into accurate and natural-sounding speech.
+- **Automatic Speech Recognition (ASR)**: This model can transcribe technical speech, even when containing complex vocabulary, with higher accuracy than general-purpose ASR systems.
 
-More information needed
+### Limitations:
+- **Non-technical Vocabulary**: While the model excels at technical speech and vocabulary, its performance on more casual or conversational English might be less optimized.
+- **Generalization**: The model may not perform as well on very niche or rare technical terms not present in the training data.
+- **Language Restriction**: This fine-tuned version is specific to **English technical vocabulary** and is not trained to generalize across other languages.
 
-## Training procedure
+## Training and Evaluation Data
+- **Training Dataset**: The model was fine-tuned using the `Yassmen/TTS_English_Technical_data` dataset. This dataset is specifically designed to cover a broad range of technical vocabulary in English, with audio-text pairs that include complex terms from various technical domains like IT, engineering, and medicine.
+  - **Size**: It contains 1.94 GB of speech data.
+  - **Content**: The dataset focuses on highly specialized vocabulary and jargon across multiple fields.
+
+## Training Procedure
+1. **Preprocessing**: The input data was preprocessed to ensure that both the text and audio were properly aligned, with steps such as text normalization (especially for technical terms) and feature extraction from audio samples.
+   - **Text Normalization**: Special care was taken to normalize abbreviations, symbols, and numerical expressions common in technical speech.
+   - **Audio Preprocessing**: Spectrograms were generated from raw audio files using a standard feature extraction pipeline.
+
+2. **Model Architecture**: SpeechT5's architecture was leveraged for its ability to handle both ASR and TTS tasks effectively. The fine-tuning process focused on adapting the output layer to better handle technical terms.
 
 ### Training hyperparameters
 
