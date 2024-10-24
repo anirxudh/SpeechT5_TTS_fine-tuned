@@ -2,6 +2,8 @@
 
 
 ![Banner](https://github.com/anirxudh/Python/blob/main/speech-to-text.jpg)
+
+
 ---
 library_name: transformers
 language:
