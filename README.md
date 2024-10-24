@@ -1,7 +1,7 @@
 ---
 library_name: transformers
 language:
-- nl
+- en
 license: mit
 base_model: microsoft/speecht5_tts
 tags:
