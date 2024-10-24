@@ -1,9 +1,3 @@
-# SpeechT5 fine-tuning
-
-
-![Banner](https://github.com/anirxudh/Python/blob/main/speech-to-text.jpg)
-
-
 ---
 library_name: transformers
 language:
@@ -22,7 +16,10 @@ model-index:
 <!-- This model card has been generated automatically according to the information the Trainer had access to. You
 should probably proofread and complete it, then remove this comment. -->
 
+# SpeechT5 fine-tuning
 
+
+![Banner](https://github.com/anirxudh/Python/blob/main/speech-to-text.jpg)
 
 This model is a fine-tuned version of [microsoft/speecht5_tts](https://huggingface.co/microsoft/speecht5_tts) on the PeekieTech data dataset.
 It achieves the following results on the evaluation set:
